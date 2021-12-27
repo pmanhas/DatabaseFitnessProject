@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url(rock.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.center {
+    margin: 0; position: absolute; top: 60%; left: 50%;
+    -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);
+}
+
+.logBtn{
+    background-color: #ff6b3f;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    width: 50px;
+    cursor: pointer;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 8px;
+    right: 60px;
+}
+
+.sidebar{
+    width: 100px;
+    height: 100vh;
+    background: #000;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.logo-icon{
+    width: 40px;
+    height: 40px;
+    margin: 30px;
+}
+
+.social-links{
+    width:100px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.social-links img{
+    height: 30px;
+    display: block;
+    margin: 30px auto;
+    cursor: pointer
+}
+
+.container{
+    max-width:  1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+nav{
+    flex:1;
+    text-align: right;
+}
+
+.logo{
+    width: 120px;
+}
+
+.user-icon{
+    width: 30px;
+    border-radius: 50% ;
+    cursor: pointer;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 13px;
+    padding: 5px 2px;
+}
+
+nav ul form input:hover{
+    border-bottom: 1px solid #ff6b3f
+}
+
+.nav_buttons {
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn{
+    border: 1px solid #fff;
+    background: transparent;
+}
+
+.center label {
+    width: 150px;
+    border: 1px solid #ff6b3f;
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #ff6b3f;
+}
+
+ h1{
+    margin: 0; position: absolute; top: 20%; left: 50%;
+    -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);
+    font-size: 56px;
+    line-height: 70px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+span{
+    color:#ff6b3f ;
+}

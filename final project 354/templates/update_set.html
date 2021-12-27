@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <style>
+
+    body {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/static/rock.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .text_font {
+      font-family: verdana;
+      font-size: 80%;
+      color: white;
+    }
+
+    .button {
+      border-radius: 10px;
+      color: white;
+      background-color: #ff6b3f;
+    }
+
+    .nav_buttons {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      border-bottom: 1px solid transparent
+    }
+
+    .nav_hover:hover {
+      border-bottom: 1px solid #ff6b3f
+    }
+
+    </style>
+
+    <title>Success!</title>
+
+    <form style="text-align:center" method='POST' action="">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_dashboard" value=" Dashboard ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_goals" value=" Goals ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_exercises" value=" Exercises ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_programs" value=" Programs ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_meals" value=" Meals ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_my_profile" value=" My Profile ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_log_out" value=" Log Out ">
+    </form>
+
+    <h1 style="text-align:center; color:white; font-family: verdana">
+      You've sucessfully updated your goal!
+    </h1>
+
+  </head>
+
+  <body>
+
+    <div style="text-align: center">
+      <form method ="POST" action = "">
+        <input class="button text_font" type="submit" value=" My Goals " name = "return_to_goal">
+      </form>
+    </div>
+
+  </body>
+
+</html>

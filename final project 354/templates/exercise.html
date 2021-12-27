@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta name = "viewport" content="width=device-width, initial-scale =1.0">
+    <title>Exercises</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}" />
+
+  </head>
+
+  <body>
+    <div class = "header">
+        <div class = "container">
+            <div class = "navbar">
+                <img src ="{{ url_for('static', filename='gains.png')}}" class="logo">
+                <nav>
+                    <ul>
+                        <form method='POST' action="">
+                          <input class="nav_buttons" type="submit" name="nav_dashboard" value=" Dashboard ">
+                          <!-- <label for="nav_dashboard" class = "navbarLinks"> Dashboard </label> -->
+                          <input class="nav_buttons" type="submit" name="nav_goals" value=" Goals ">
+                          <!-- <label for="nav_goals" class = "navbarLinks"> Goals </label> -->
+                          <input class="nav_buttons" type="submit" name="nav_exercises" value=" Exercises ">
+                          <!-- <label for="nav_exercises" class = "navbarLinks"> Exercises </label> -->
+                          <input class="nav_buttons" type="submit" name="nav_programs" value=" Programs ">
+                          <!-- <label for="nav_programs" class = "navbarLinks"> Programs </label> -->
+                          <input class="nav_buttons" type="submit" name="nav_meals" value=" Meals ">
+                          <!-- <label for="nav_meals" class = "navbarLinks"> Meals </label> -->
+                          <input class="nav_buttons" type="submit" name="nav_my_profile" value=" My Profile ">
+                          <!-- <label for="nav_my_profile" class = "navbarLinks"> My Profile </label> -->
+                          <input class="nav_buttons" type="submit" name="nav_log_out" value=" Log Out ">
+                          <!-- <label for="nav_log_out" class = "navbarLinks"> Log Out </label> -->
+                        </form>
+                    </ul>
+                </nav>
+                <!-- <img src="{{ url_for('static', filename='kenny.jpg')}}" class  ="user-icon"> -->
+            </div>
+        </div>
+
+
+      <form class="log" method='POST' >
+        <input type="submit" id = "logBtn" name="log" hidden>
+        <label for="logBtn" class="logBtn">Log</label>
+      </form>
+
+      <h1>Select <span>An</span> Exercise <span>To</span> Perform</h1>
+
+      <form class="center" method="POST" action="">
+        {% for post in posts %}
+          <input type="submit" id ="{{post}}" name="{{post}}" hidden>
+          <label for="{{post}}">{{post}}</label> <br><br><br>
+        {% endfor %}
+      </form>
+    </div>
+
+    <!-- <div class = "sidebar">
+        <img src ="{{ url_for('static', filename='cool.png')}}"  class="logo-icon">
+        <div class ="social-links">
+            <a href="https://www.facebook.com/">
+                <img src="{{ url_for('static', filename='fb.png') }}">
+            </a>
+
+            <a href="https://www.instagram.com/">
+                <img src="{{ url_for('static', filename='ig.png') }}">
+            </a>
+
+            <a href="https://twitter.com/?lang=en">
+                <img src="{{ url_for('static', filename='tw.png') }}">
+            </a>
+        </div>
+
+    </div> -->
+
+  </body>
+
+</html>

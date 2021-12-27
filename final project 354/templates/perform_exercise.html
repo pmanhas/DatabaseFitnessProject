@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div style="width: 350px; height: 500px; margin: 0; position: absolute; top: 70%; left: 50%;
+  -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);">
+
+      <h1 style="margin: 0; position: absolute; top: -30%; left: 50%;
+      -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);
+      font-size: 56px;
+      line-height: 70px;
+      letter-spacing: 1px;
+      color: white;">Perform <span>{{exerciseName}}</span></h1>
+
+      <form class="perfromanceTable" method="POST">
+        <br>
+
+        <strong style="color: white">Repetitions: </strong>
+        <br>
+        <input type="number" min="1" step="1" name ="repetitions" required/>
+        <br><br>
+
+        <strong style="color: white">Date: </strong>
+        <br>
+        <input type="date" name="date" required/>
+        <br><br>
+
+        <br>
+        <div style="text-align: center">
+          <input type="submit" name="submitPerformance" id = "submitPerformance" value="Perform Exercise" hidden>
+          <label for="submitPerformance">Perform Exercise</label>
+        </div>
+      </form>
+
+  </div>
+{% endblock content %}

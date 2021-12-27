@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <style>
+
+    .back_location {
+      margin: 0; position: absolute; top: 4%; left: 7%;
+      -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);
+    }
+
+    body {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/static/rock.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .bolded_input_field {
+      border: 4px solid #ff6b3f;
+      border-radius: 10px;
+      padding-left: 4px;
+    }
+
+    .input_focus:focus {
+      border-radius: 3px;
+    }
+
+    .text_font {
+      font-family: verdana;
+      font-size: 80%;
+      color: white;
+    }
+
+    .button {
+      border-radius: 10px;
+      color: white;
+      background-color: #ff6b3f;
+    }
+
+    .back_button {
+      border-radius: 10px;
+      color: white;
+      background-color: #ff6b3f;
+    }
+
+    .nav_buttons {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      border-bottom: 1px solid transparent
+    }
+
+    .nav_hover:hover {
+      border-bottom: 1px solid #ff6b3f
+    }
+
+    </style>
+
+    <title>View My Goals</title>
+
+    <form style="text-align:center" method='POST' action="">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_dashboard" value=" Dashboard ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_goals" value=" Goals ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_exercises" value=" Exercises ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_programs" value=" Programs ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_meals" value=" Meals ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_my_profile" value=" My Profile ">
+      <input class="nav_buttons nav_hover" type="submit" name="nav_log_out" value=" Log Out ">
+    </form>
+
+  </head>
+
+  <body>
+
+    <div style="height: 600px; position: relative;">
+
+      <form class="back_location" method='POST' action="">
+        <input class="back_button text_font" type="submit" name="back" value="  Back  ">
+      </form>
+
+      <h3 style="text-align:center; font-family:verdana; font-size:150%; color: white;">
+        View My Goals
+      </h3>
+
+        <div class="text_font" style = "margin: 0; position: absolute; top: 10%; left: 50%;
+        -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%)">
+          Showing: {{selected_goal_achievement}}
+        </div><br><br>
+
+        <table border = 1 style = "margin: 0; position: absolute; top: 40%; left: 50%;
+        -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);
+        border: 4px solid #ff6b3f; background-color: white;" >
+
+          <thead>
+          <tr>
+            <th><strong>Goal Number</strong></th>
+            <th><strong>Target Weight (lbs)</strong></th>
+            <th><strong>Time Frame (weeks)</strong></th>
+            <th><strong>Goal Achieved?</strong></th>
+          </tr>
+        </thead>
+          {% for goal in goals_with_achievement %}
+          <tr>
+            <td>{{goal[0]}}</td>
+            <td>{{goal[2]}}</td>
+            <td>{{goal[3]}}</td>
+            <td>{{goal[4]}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </form>
+
+    </div>
+
+  </body>
+
+</html>

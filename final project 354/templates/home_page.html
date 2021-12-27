@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <style>
+
+    .center {
+      margin: 0; position: absolute; top: 40%; left: 50%;
+      -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);
+    }
+
+    body {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/static/rock.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .text_font {
+      font-family: verdana;
+      font-size: 80%;
+      color: white;
+    }
+
+    .button {
+      border-radius: 10px;
+      color: white;
+      background-color: #ff6b3f;
+    }
+
+    </style>
+
+    <title>Home Page</title>
+
+    <h1 style="text-align:center; color:white; font-family: verdana;">
+      Welcome to the home page!
+    </h1>
+
+  </head>
+
+  <body>
+
+    <div class="center">
+      <div style="text-align:center">
+        <input class="button text_font" type="button" onclick="document.location='sign_in'" value="  Sign in!  ">
+        <br><br><br>
+        <input class="button text_font" type="button" onclick="document.location='sign_up'" value="  Sign Up!  ">
+      </div>
+    </div>
+    <br>
+
+  </body>
+
+</html>

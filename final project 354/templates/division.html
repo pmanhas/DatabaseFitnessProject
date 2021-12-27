@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class = "logTitle">Log <span>Of</span> All <span>Exercises</span> Performed<span> On </span>{{date}}</h1>
+    <table style="margin: 0; position: absolute; top: 30%; left: 50%;
+    -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);">
+        <thead>
+            <tr>
+                <th> Repetitions</th>
+                <th>Exercise Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for row in posts%}
+                <tr>
+                    {%for cell in row%}
+                        <td> {{cell}}</td>
+                    {%endfor%}
+                </tr>
+            {%endfor%}
+    </tbody>
+    </table>
+{% endblock content %}

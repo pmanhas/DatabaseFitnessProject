@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class = "logTitle">Log <span>Of</span> All <span>Exercises</span> Performed</h1>
+    <table style="margin: 0; position: absolute; top: 35%; left: 50%;
+    -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);">
+        <thead>
+            <tr>
+                <th> Repetitions</th>
+                <th>Exercise Name</th>
+                <th> Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for row in posts%}
+                <tr>
+                    {%for cell in row%}
+                        <td> {{cell}}</td>
+                    {%endfor%}
+                </tr>
+            {%endfor%}
+    </tbody>
+    </table>
+    <div class="division">
+        <h3 class = "divisionTitle">Find <span>Exercises</span> Performed <span>On</span> Date</h3>
+        <form class ="divisionForm" method = "POST">
+            <br>
+
+            <strong style="color: white">Date: </strong>
+            <br>
+            <input type="date" name="date" required/>
+            <br><br>
+
+            <br>
+            <div class="divisonBtn">
+            <input type="submit" id = "submitDivision" name="divisionBtn" value="Find Exercises/Repetitions" hidden>
+            <label for="submitDivision">Find Exercises/Repetitions</label>
+            </div>
+        </form>
+    </div>>
+    <form class="count"  method="POST">
+        <input type="submit" id = "submitCount" name="countBtn" value="Count Up Times Each Exercise Was Performed" hidden>
+        <label for="submitCount">Count Up Times Each Exercise Was Performed</label>
+    </form>
+{% endblock content %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <style>
+
+    .center {
+      margin: 0; position: absolute; top: 50%; left: 50%;
+      -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);
+    }
+
+    .back_location {
+      margin: 0; position: absolute; top: 8%; left: 5%;
+      -ms-transform: translate(-50%, -50%); transform: translate(-49%, -49%);
+    }
+
+    </style>
+
+    <title>Add Meals</title>
+
+  </head>
+
+  <body>
+
+    <div style="height: 600px; position: relative; border: 3px solid black">
+
+      <form class="back_location" method='POST' action="">
+        <input type="submit" name="back" value="  Back  ">
+      </form>
+
+      <h3 style="text-align:center">Select Date</h3>
+
+      <form class="center" method="POST" action="">
+        <div>Please indicate whether you achieved your goal or not:</div><br>
+        <select name = "selected_goal_achievement" value = "">
+          <option name = "achieved_goals" value="Achieved Goals">Achieved Goals</option>
+          <option name ="unachieved_goals" value = "Unachieved Goals">Unachieved Goals</option>
+        </select>
+        <input type="submit"><br><br>
+      </form>
+
+    </div>
+
+  </body>
+
+</html>
